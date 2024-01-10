@@ -43,8 +43,8 @@
                     <a href="/product/<%= prod._id %>">
                       <span class="tt-img"
                         ><img
-                          src="/images/<%= prod.images[0] %>"
-                          data-src="/images/<%= prod.images[0] %>"
+                          src="/images/product/<%= prod.images[0] %>"
+                          data-src="/images/product/<%= prod.images[0] %>"
                           alt=""
                           class="loaded"
                           data-was-processed="true"
@@ -143,7 +143,7 @@
                             <div class="tt-product-total">
                               <div class="tt-total">
                                 TOTAL:
-                                <span class="tt-price">$<%= prod.price %></span>
+                                <span class="tt-price"><span class="money"><%= prod.price %></span> đ</span>
                               </div>
                             </div>
                           </div>

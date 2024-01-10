@@ -61,8 +61,7 @@
                         <%= o.phoneNumber %>
                       </td>
                       <td>
-                        $<%= o.cart.totalPrice %> cho <%= o.cart.totalQty %> sản
-                        phẩm
+                         <span class="money"><%= o.cart.totalPrice %></span> đ / <%= o.cart.totalQty %> sp
                       </td>
                     </tr>
                     <% }) %>

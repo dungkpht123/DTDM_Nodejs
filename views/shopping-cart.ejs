@@ -29,8 +29,8 @@
                   <td>
                     <div class="tt-product-img">
                       <img
-                        src="/images/<%= item.images %>"
-                        data-src="/images/<%= item.images %>"
+                        src="/images/product/<%= item.images %>"
+                        data-src="/images/product/<%= item.images %>"
                         alt=""
                       />
                     </div>
@@ -48,7 +48,7 @@
                     <ul class="tt-list-parameters">
                       <li>
                         <div class="tt-price">
-                          $<%= item.price %>
+                          <span class="money"><%= item.price %></span> đ
                         </div>
                       </li>
                       <li>
@@ -56,14 +56,14 @@
                       </li>
                       <li>
                         <div class="tt-price subtotal">
-                          $<%= item.price %>
+                          <span class="money"><%= item.price %></span> đ
                         </div>
                       </li>
                     </ul>
                   </td>
                   <td>
                     <div class="tt-price">
-                      $<%= item.item.price %>
+                      <span class="money"><%= item.item.price %></span> đ
                     </div>
                   </td>
                   <td>
@@ -81,7 +81,7 @@
 
                   <td class="box-pricei<%= item.item._id %>">
                     <div class="tt-price subtotal">
-                      $<%= item.price %>
+                      <span class="money"><%= item.item.price %></span> đ
                     </div>
                   </td>
 
@@ -121,13 +121,13 @@
                     <tbody>
                       <tr>
                         <th>Tổng hàng</th>
-                        <td>$<%= session.cart.totalPrice %></td>
+                        <td><span class="money"><%= session.cart.totalPrice %></span> đ</td>
                       </tr>
                     </tbody>
                     <tfoot>
                       <tr>
                         <th>Tổng tất cả</th>
-                        <td>$<%= session.cart.totalPrice %></td>
+                        <td><span class="money"><%= session.cart.totalPrice %></span> đ</td>
                       </tr>
                     </tfoot>
                   </table>

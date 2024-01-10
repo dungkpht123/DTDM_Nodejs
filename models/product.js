@@ -65,7 +65,6 @@ const productSchema = new Schema({
   ofSellers: {
     userId: {
       type: Schema.Types.ObjectId,
-      required: true,
       ref: "User"
     },
     name: String

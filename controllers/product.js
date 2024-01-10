@@ -367,12 +367,11 @@ exports.postAddOrder = async (req, res, next) => {
     });
 
     for (var id in req.session.cart.items) {
-      await Products.findOne({ _id: id })
+        await Products.findOne({ _id: id })
         .then(product => {
           product.buyCounts += parseInt(req.session.cart.items[id].qty);
           product.save();
         })
-        .catch(err => console.log(err));
     }
 
     order.save((err, result) => {
